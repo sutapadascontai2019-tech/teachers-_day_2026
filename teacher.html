@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher's Day Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background: #fffaf0;
+
+    color: #443322;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(rgb(206 192 19 / 65%), rgb(9 92 13 / 65%)),
+        url("school.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+
+    color: white;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.top-text {
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+}
+
+
+.hero h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(55px,
+            9vw,
+            100px);
+
+    margin: 20px 0;
+}
+
+
+.date {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.date span {
+
+    font-size: 80px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.date div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.date strong {
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+}
+
+
+.date small {
+
+    font-size: 16px;
+}
+
+
+.quote {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #d99b35;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+    background: #b97918;
+}
+
+
+/* =========================
+   FLOATING ICONS
+========================= */
+
+.floating-icons span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 30px;
+
+    animation: floating 8s linear infinite;
+}
+
+
+.floating-icons span:nth-child(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.floating-icons span:nth-child(2) {
+    left: 30%;
+    animation-delay: 3s;
+}
+
+.floating-icons span:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.floating-icons span:nth-child(4) {
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.floating-icons span:nth-child(5) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+
+@keyframes floating {
+
+    0% {
+
+        transform:
+            translateY(0) rotate(0);
+
+        opacity: 0;
+
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-100vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.invitation {
+
+    padding: 100px 0;
+
+    text-align: center;
+}
+
+
+.section-title {
+
+    color: #c18420;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+}
+
+
+.invitation h2,
+.program h2,
+.rsvp h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 60px;
+
+    margin: 10px 0 25px;
+}
+
+
+.teacher-icon {
+
+    font-size: 55px;
+
+    color: #d99b35;
+
+    margin: 20px;
+}
+
+
+.message {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+
+.detail-card {
+
+    background: white;
+
+    padding: 35px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+}
+
+
+.detail-card:hover {
+
+    transform: translateY(-8px);
+}
+
+
+.detail-card i {
+
+    font-size: 35px;
+
+    color: #d99b35;
+
+    margin-bottom: 15px;
+}
+
+
+.detail-card h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.detail-card p {
+
+    color: #777;
+
+    margin-bottom: 5px;
+}
+
+
+.detail-card strong {
+
+    color: #b97918;
+}
+
+
+/* =========================
+   PROGRAM
+========================= */
+
+.program {
+
+    padding: 100px 0;
+
+    background: #fff3d9;
+
+    text-align: center;
+}
+
+
+.timeline {
+
+    max-width: 800px;
+
+    margin: 50px auto 0;
+
+    text-align: left;
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.timeline-item>span {
+
+    font-weight: 600;
+
+    color: #b97918;
+
+    padding-top: 10px;
+}
+
+
+.timeline-item>div {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, .06);
+}
+
+
+.timeline-item i {
+
+    color: #d99b35;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.timeline-item h3 {
+
+    margin-bottom: 8px;
+}
+
+
+.timeline-item p {
+
+    color: #777;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #62472d;
+
+    color: white;
+}
+
+
+.thank-you h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    margin: 20px 0;
+}
+
+
+.thank-you p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+}
+
+
+.thank-you>.container>i {
+
+    font-size: 25px;
+
+    color: #f0c36a;
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+
+    padding: 100px 0;
+
+    text-align: center;
+}
+
+
+#rsvpForm {
+
+    max-width: 550px;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+#rsvpForm input,
+#rsvpForm select {
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+
+#rsvpForm input:focus,
+#rsvpForm select:focus {
+
+    border-color: #d99b35;
+}
+
+
+#successMessage {
+
+    color: #b97918;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #382719;
+
+    color: white;
+}
+
+
+.graduation {
+
+    font-size: 45px;
+
+    color: #f0c36a;
+}
+
+
+footer h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 50px;
+
+    margin: 15px 0;
+}
+
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin: 25px;
+}
+
+
+.social i {
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.copyright {
+
+    font-size: 13px;
+
+    opacity: .7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .details {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .invitation h2,
+    .program h2,
+    .rsvp h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .thank-you h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .date span {
+
+        font-size: 60px;
+
+    }
+
+}</style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="floating-icons">
+
+            <span>📚</span>
+            <span>✏️</span>
+            <span>🍎</span>
+            <span>🎓</span>
+            <span>📖</span>
+
+        </div>
+
+        <div class="hero-content">
+
+            <p class="top-text">
+                With love and gratitude
+            </p>
+
+            <h1>
+                Happy Teacher's Day
+            </h1>
+
+            <div class="date">
+                <span>5</span>
+                <div>
+                    <strong>SEPTEMBER</strong>
+                    <small>2026</small>
+                </div>
+            </div>
+
+            <p class="quote">
+                "A teacher takes a hand,
+                opens a mind and touches a heart."
+            </p>
+
+            <button
+                class="btn"
+                onclick="openInvitation()">
+
+                <i class="fa-solid fa-envelope-open"></i>
+                Open Invitation
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INVITATION
+    ========================== -->
+
+    <section
+        class="invitation"
+        id="invitation">
+
+        <div class="container">
+
+            <p class="section-title">
+                You Are Cordially Invited
+            </p>
+
+            <h2>
+                Teacher's Day Celebration
+            </h2>
+
+            <div class="teacher-icon">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+            </div>
+
+            <p class="message">
+
+                Dear Teacher,
+
+                <br><br>
+
+                Your guidance gives us direction,
+                your knowledge gives us strength,
+                and your kindness inspires us to become
+                better every day.
+
+                <br><br>
+
+                On this special occasion of Teacher's Day,
+                we invite you to join us as we celebrate
+                the wonderful teachers who make a difference
+                in our lives.
+
+            </p>
+
+
+            <!-- EVENT DETAILS -->
+
+            <div class="details">
+
+                <div class="detail-card">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <h3>Date</h3>
+
+                    <p>
+                        Saturday
+                    </p>
+
+                    <strong>
+                        5th September 2026
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <h3>Time</h3>
+
+                    <p>
+                        Celebration Begins
+                    </p>
+
+                    <strong>
+                        1:00 PM
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>Venue</h3>
+
+                    
+
+                    <strong>
+                        Our Office Campus
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROGRAM
+    ========================== -->
+
+    <section class="program">
+
+        <div class="container">
+
+            <p class="section-title">
+                Special Program
+            </p>
+
+            <h2>
+                Celebration Schedule
+            </h2>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <span>
+                        1:00 PM
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-flag"></i>
+
+                        <h3>
+                            Welcome Ceremony
+                        </h3>
+
+                        <p>
+                            Welcome speech
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- <div class="timeline-item">
+
+                    <span>
+                        1:30 AM
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        <h3>
+                            Cultural Program
+                        </h3>
+
+                        <p>
+                            Music, dance and special
+                            performances by students.
+                        </p>
+
+                    </div>
+
+                </div> -->
+
+
+                <div class="timeline-item">
+
+                    <span>
+                        1:30 PM
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-gift"></i>
+
+                        <h3>
+                            Teacher Felicitation
+                        </h3>
+
+                        <p>
+                            Honouring our wonderful teachers
+                            with love and gratitude.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span>
+                        2:00 PM
+                    </span>
+
+                    <div>
+
+                        <i class="fa-solid fa-cake-candles"></i>
+
+                        <h3>
+                            Celebration & Refreshments
+                        </h3>
+
+                        <p>
+                            Cake cutting and refreshments
+                            for everyone.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MESSAGE
+    ========================== -->
+
+    <section class="thank-you">
+
+        <div class="container">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h2>
+                Thank You, Teachers!
+            </h2>
+
+            <p>
+
+                For every lesson you teach,
+                every question you answer,
+                and every dream you encourage.
+
+                <br>
+
+                You don't just teach subjects,
+                you teach us how to live.
+
+            </p>
+
+            <i class="fa-solid fa-quote-right"></i>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RSVP
+    ========================== -->
+
+    <section class="rsvp">
+
+        <div class="container">
+
+            <p class="section-title">
+                RSVP
+            </p>
+
+            <h2>
+                Confirm Your Presence
+            </h2>
+
+            <form id="rsvpForm">
+
+                <input
+                    type="text"
+                    id="teacherName"
+                    placeholder="Teacher's Name"
+                    required>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject / Department"
+                    required>
+
+                <select
+                    id="attendance"
+                    required>
+
+                    <option value="">
+                        Will you attend?
+                    </option>
+
+                    <option value="yes">
+                        Yes, I will attend
+                    </option>
+
+                    <option value="no">
+                        Sorry, I cannot attend
+                    </option>
+
+                </select>
+
+                <button
+                    type="submit"
+                    class="btn">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Confirm Attendance
+
+                </button>
+
+            </form>
+
+            <p id="successMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="graduation">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+            <h2>
+                Happy Teacher's Day
+            </h2>
+
+            <p>
+                5th September 2026
+            </p>
+
+            <div class="social">
+
+                <i class="fa-brands fa-facebook"></i>
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+
+            <p class="copyright">
+                Made with ❤️ by the Students
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>// ================================
+// OPEN INVITATION
+// ================================
+
+function openInvitation() {
+
+    document
+        .getElementById("invitation")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+// ================================
+// RSVP
+// ================================
+
+const rsvpForm =
+    document.getElementById("rsvpForm");
+
+
+rsvpForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "teacherName"
+            ).value;
+
+
+        const attendance =
+            document.getElementById(
+                "attendance"
+            ).value;
+
+
+        const message =
+            document.getElementById(
+                "successMessage"
+            );
+
+
+        if (attendance === "yes") {
+
+            message.textContent =
+                `Thank you ${name}! We are happy that you will join us for the Teacher's Day celebration.`;
+
+        }
+
+        else {
+
+            message.textContent =
+                `Thank you ${name}! We appreciate your response.`;
+
+        }
+
+
+        rsvpForm.reset();
+
+    }
+);
+</script>
+
+</body>
+
+</html>
