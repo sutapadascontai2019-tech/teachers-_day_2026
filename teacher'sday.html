@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher's Day Celebration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: cardEntry 1.5s ease;
+        }
+
+        @keyframes cardEntry {
+            from {
+                opacity: 0;
+                transform: scale(0.5) rotate(-5deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        .emoji {
+            font-size: 70px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            color: #6c2bd9;
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        h2 {
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            color: #444;
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 20px auto;
+            max-width: 550px;
+        }
+
+        .date {
+            display: inline-block;
+            background: #6c2bd9;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e63946;
+            margin: 20px 0;
+        }
+
+        button {
+            border: none;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 65, 108, 0.4);
+        }
+
+        #wish {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #6c2bd9;
+            min-height: 30px;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 30px;
+            animation: fall linear infinite;
+        }
+
+        .flower:nth-child(1) {
+            left: 5%;
+            animation-duration: 6s;
+        }
+
+        .flower:nth-child(2) {
+            left: 20%;
+            animation-duration: 8s;
+        }
+
+        .flower:nth-child(3) {
+            left: 80%;
+            animation-duration: 7s;
+        }
+
+        .flower:nth-child(4) {
+            left: 90%;
+            animation-duration: 9s;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                top: 110vh;
+                transform: rotate(360deg);
+            }
+        }
+
+        @media(max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .emoji {
+                font-size: 55px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating flowers -->
+    <div class="flower">🌸</div>
+    <div class="flower">🌹</div>
+    <div class="flower">🌺</div>
+    <div class="flower">🌼</div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="emoji">👩‍🏫</div>
+
+            <h1>Happy Teacher's Day!</h1>
+
+            <h2>🌟 Thank You, Dear Teachers 🌟</h2>
+
+            <p class="message">
+                A teacher takes a hand, opens a mind,
+                and touches a heart. ❤️
+                <br><br>
+                Thank you for your patience, guidance,
+                inspiration and endless support.
+            </p>
+
+            <div class="date">
+                📅 5th September
+            </div>
+
+            <div id="countdown">
+                Loading...
+            </div>
+
+            <button onclick="celebrate()">
+                🎉 Celebrate Teacher's Day
+            </button>
+
+            <div id="wish"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // ==============================
+        // COUNTDOWN
+        // ==============================
+
+        function updateCountdown() {
+
+            const now = new Date();
+
+            let year = now.getFullYear();
+
+            let teacherDay =
+                new Date(year, 8, 5, 0, 0, 0);
+
+            // If Teacher's Day has already passed
+            if (now > teacherDay) {
+                teacherDay =
+                    new Date(year + 1, 8, 5, 0, 0, 0);
+            }
+
+            const difference =
+                teacherDay - now;
+
+            const days =
+                Math.floor(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
+
+            const hours =
+                Math.floor(
+                    (difference /
+                    (1000 * 60 * 60)) % 24
+                );
+
+            const minutes =
+                Math.floor(
+                    (difference /
+                    (1000 * 60)) % 60
+                );
+
+            const seconds =
+                Math.floor(
+                    (difference / 1000) % 60
+                );
+
+            document.getElementById("countdown")
+                .textContent =
+                `${days} Days ${hours} Hours
+                 ${minutes} Minutes ${seconds} Seconds`;
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+
+
+        // ==============================
+        // CELEBRATION
+        // ==============================
+
+        function celebrate() {
+
+            document.getElementById("wish")
+                .textContent =
+                "🎉 Happy Teacher's Day! 🎉";
+
+            createConfetti();
+        }
+
+
+        // ==============================
+        // CONFETTI
+        // ==============================
+
+        function createConfetti() {
+
+            for (let i = 0; i < 50; i++) {
+
+                const confetti =
+                    document.createElement("div");
+
+                confetti.textContent = "🎊";
+
+                confetti.style.position = "fixed";
+
+                confetti.style.left =
+                    Math.random() * 100 + "vw";
+
+                confetti.style.top = "-30px";
+
+                confetti.style.fontSize =
+                    Math.random() * 20 + 15 + "px";
+
+                confetti.style.zIndex = "999";
+
+                document.body.appendChild(confetti);
+
+                const animation =
+                    confetti.animate(
+                        [
+                            {
+                                transform: "translateY(0) rotate(0deg)",
+                                opacity: 1
+                            },
+                            {
+                                transform:
+                                    `translateY(110vh)
+                                     rotate(720deg)`,
+                                opacity: 0
+                            }
+                        ],
+                        {
+                            duration:
+                                Math.random() * 3000 + 2000,
+                            easing: "linear"
+                        }
+                    );
+
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+
+    </script>
+
+</body>
+</html>
