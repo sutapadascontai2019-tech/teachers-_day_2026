@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5th september</title>
+    <style>
+#div1{
+   width:90%;
+   height:100px;
+   text-align: center;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(5, 226, 247);
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 80px;   
+   border: 70px solid transparent;
+            padding: 2px;
+            border-image-source: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwDWy3MjxeoCeF3p8IgVRGMP_oAsN19rjdTl27wf3qOA&s=10');
+            border-image-repeat:round;
+            border-image-slice: 70;
+            margin-top: 5px;
+}
+#image{
+    width:97%;
+    height:460px;
+    background-color: chartreuse;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+      border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+  position:relative;
+}
+img{
+    width:400px;
+    height:50;
+    margin-top:8px;
+ }
+ .overlay{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width:38%;
+
+    opacity:0;
+    transition: .5s ease;
+    background-color: chocolate;
+ }
+ #image:hover .overlay{
+    opacity: 1;
+
+ }
+ .text{
+    color: rgb(235, 234, 240);
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    text-align: center;
+ }
+ .text2{
+    color:rgb(53, 5, 227);
+    font-size: 40px;
+    
+       position: absolute;
+    top: 50%;
+    left: 200%;
+    transform: translate(-50%, -50%);
+ }
+ #demo1{
+    background-color: rgb(249, 103, 13);
+    color:white;
+    margin-top: 2px;
+ }
+  #demo2{
+    background-color: rgb(231, 230, 235);
+    color:rgb(28, 14, 232);
+    margin-top: -13px;
+ }
+  #demo3{
+    background-color: rgb(5, 121, 18);
+    color:rgb(16, 15, 15);
+    margin-top: -15px;
+ }
+ button{
+   background-color: #eb412ca8;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    margin-left: 840px;
+    font-size: 17px;
+    border-radius: 10px;
+ }
+ #wish{
+   background-color: aqua;
+       width: 200px;
+    height: 32px;
+    font-size: 16px;
+    margin-left: 840px;
+    border-radius: 10px;
+ }
+    </style>
+</head>
+<body>
+    <h1 id="div1">Happy Teacher's Day</h1>
+   
+   <div  id="image"> <img  src="https://bharatmatamandir.in/wp-content/uploads/sites/22/2010/03/Sarvapaali-Radhkrishnan1.jpg">
+<div class="overlay">
+    
+    <div class="text">Happy Birthday Dr. Sarbapalli Radhakrishnan</div>
+    <div class="text2">Best Wishes To All Our Respected Teachers. </div>
+</div>
+</div>
+ <button onclick="celebrate()">
+                🎉 Celebrate Teacher's Day
+            </button>
+
+            <div id="wish"></div>
+   <p id="demo1">Today, we gather to celebrate Teachers’ Day, a special occasion dedicated to appreciating the tireless efforts of our teachers. Teachers play a vital role in shaping our lives, guiding us not only in academics but also in developing our values and character. They are the pillars of knowledge and wisdom, always ready to support and encourage us to reach our full potential. </p>
+
+<p id="demo2">A good speech for Teachers’ Day reflects the respect and gratitude we hold for our educators. Teachers inspire us to dream big and work hard, even when things get tough. Their dedication goes far beyond what we see in the classroom—they nurture our confidence, teach us the importance of discipline, and show patience when we struggle. 
+On this day, it is essential to remember that every lesson a teacher imparts helps build the foundation of our future.</p> <p id="demo3">The encouragement and guidance we receive motivate us to set goals and strive for success in all areas of life. Teachers are our mentors, friends, and sometimes even role models. 
+
+Let us take this opportunity to thank all our teachers for their endless support and contributions. We promise to honour their efforts by being attentive students, respecting their guidance, and aspiring to make them proud. Happy Teachers’ Day to all those who dedicate their hearts and minds to educating the next generation.</p>
+<p id="demo"></p>
+
+            <script>
+       // ==============================
+        // CELEBRATION
+        // ==============================
+
+
+        function celebrate() {
+
+            document.getElementById("wish")
+                .textContent =
+                "🎉 Happy Teacher's Day! 🎉";
+
+            createConfetti();
+        }
+
+
+        // ==============================
+        // CONFETTI
+        // ==============================
+
+        function createConfetti() {
+
+            for (let i = 0; i < 50; i++) {
+
+                const confetti =
+                    document.createElement("div");
+
+                confetti.textContent = "💐";
+
+                confetti.style.position = "fixed";
+
+                confetti.style.left =
+                    Math.random() * 100 + "vw";
+
+                confetti.style.top = "-30px";
+
+                confetti.style.fontSize =
+                    Math.random() * 20 + 15 + "px";
+
+                confetti.style.zIndex = "999";
+
+                document.body.appendChild(confetti);
+
+                const animation =
+                    confetti.animate(
+                        [
+                            {
+                                transform: "translateY(0) rotate(0deg)",
+                                opacity: 1
+                            },
+                            {
+                                transform:
+                                    `translateY(110vh)
+                                     rotate(720deg)`,
+                                opacity: 0
+                            }
+                        ],
+                        {
+                            duration:
+                                Math.random() * 3000 + 2000,
+                            easing: "linear"
+                        }
+                    );
+
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+
+    </script>
+</body>
+</html>
